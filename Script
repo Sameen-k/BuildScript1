@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#This script will be used to update the server and creates a new file with the number of upgradable packages every Friday at 11pm
+
+echo "Hello, here are Fridays updates.."
+touch update_logs.txt
+sudo apt update && sudo apt upgrade -y
+apt list --upgradable > update_logs.txt
+date > update_logs.txt
+cat update_logs.txt
