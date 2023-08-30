@@ -8,3 +8,7 @@ sudo apt update && sudo apt upgrade -y
 apt list --upgradable > update_logs.txt
 date > update_logs.txt
 cat update_logs.txt
+
+chmod +x buildscript1.sh
+crontab -e
+0 23 * * 5 /buildscript1.sh
